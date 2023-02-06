@@ -13,7 +13,7 @@ class ImageController extends Controller
 
         $name =  Str::uuid() . "." . $request->file("file")->extension();
 
-        $image = Image::make($request->file("file"))->fit(100, 100);
+        $image = Image::make($request->file("file"))->fit(1000, 1000);
 
         $image->save(public_path("uploads") . "/" . $name);
 
